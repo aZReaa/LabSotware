@@ -1,4 +1,5 @@
 /* Global Reset & Font */
+/* Global Reset & Font */
 * {
     margin: 0;
     padding: 0;
@@ -7,11 +8,10 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    /* Gradien lebih halus atau gunakan gambar latar jika suka */
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    /* background: url('your-background-image.jpg') no-repeat center center fixed; */
-    /* background-size: cover; */
-    color: #ffffff;
+    /* Ganti background: Latar belakang putih bersih */
+    background-color: #f8f9fa; /* Sedikit off-white agar container putih menonjol */
+    /* Ganti warna teks utama ke biru tua */
+    color: #0D47A1; /* Biru tua sesuai nuansa logo */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -24,38 +24,41 @@ body {
     max-width: 680px; /* Lebar maksimum container */
     padding: 40px 50px;
     text-align: center;
-    /* Efek Glassmorphism */
-    background: rgba(255, 255, 255, 0.15); /* Warna semi-transparan */
-    border-radius: 20px; /* Sudut lebih bulat */
-    backdrop-filter: blur(10px); /* Efek blur di belakang */
-    -webkit-backdrop-filter: blur(10px); /* Untuk Safari */
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    /* Hapus Efek Glassmorphism, ganti dengan background solid */
+    background-color: #ffffff; /* Latar belakang container putih */
+    border-radius: 15px; /* Sudut agak bulat */
+    /* Tambahkan border biru tipis */
+    border: 1px solid #B0BEC5; /* Border biru abu-abu muda */
+    /* Ganti shadow agar lebih standar */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .profile-picture {
-    width: 120px; /* Ukuran gambar lebih besar */
+    width: 120px; /* Ukuran gambar */
     height: 120px;
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 20px;
-    border: 4px solid rgba(255, 255, 255, 0.5); /* Border lebih tebal */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Shadow halus */
+    /* Ganti border ke biru tua solid */
+    border: 4px solid #0D47A1; /* Border biru tua */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 .profile-name {
-    font-size: 2em; /* Ukuran font nama lebih besar */
-    font-weight: 700; /* Lebih tebal */
+    font-size: 2em;
+    font-weight: 700;
     margin-bottom: 8px;
-    letter-spacing: 1px; /* Sedikit jarak antar huruf */
+    letter-spacing: 1px;
+    /* Warna sudah diatur dari body, pastikan sesuai (#0D47A1) */
 }
 
 .profile-bio {
     font-size: 1em;
-    font-weight: 300;
-    margin-bottom: 35px; /* Jarak lebih besar sebelum link */
-    color: rgba(255, 255, 255, 0.9); /* Sedikit redup */
-    max-width: 500px; /* Batasi lebar bio agar tidak terlalu lebar */
+    font-weight: 400; /* Sedikit lebih tebal dari 300 */
+    margin-bottom: 35px;
+    /* Ganti warna bio ke abu-abu tua */
+    color: #455A64; /* Biru abu-abu tua */
+    max-width: 500px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -70,43 +73,51 @@ body {
 }
 
 .link-button {
-    display: flex; /* Aktifkan flexbox untuk ikon dan teks */
-    align-items: center; /* Pusatkan item secara vertikal */
-    justify-content: center; /* Pusatkan konten (ikon+teks) di tombol */
-    background-color: rgba(255, 255, 255, 0.95);
-    color: #333; /* Warna teks tombol */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Ganti background tombol ke biru tua */
+    background-color: #0D47A1; /* Biru tua */
+    /* Ganti warna teks tombol ke putih */
+    color: #ffffff;
     padding: 14px 20px;
     text-decoration: none;
-    border-radius: 10px; /* Sudut tombol lebih halus */
-    font-weight: 600; /* Teks tombol sedikit tebal */
+    border-radius: 8px; /* Sudut tombol standar */
+    font-weight: 600;
     font-size: 1em;
-    transition: all 0.3s ease; /* Transisi lebih halus untuk semua properti */
-    border: 1px solid transparent; /* Border awal transparan */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow tombol */
-    position: relative; /* Untuk potensi efek tambahan */
+    transition: all 0.3s ease;
+    /* Ganti border */
+    border: 1px solid #0D47A1; /* Border biru tua (cocok dengan background) */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow tombol halus */
+    position: relative;
 }
 
 .link-button i {
-    /* Ikon Font Awesome */
-    margin-right: 12px; /* Jarak antara ikon dan teks */
-    font-size: 1.2em; /* Ukuran ikon sedikit lebih besar */
-    width: 20px; /* Beri lebar tetap agar teks sejajar */
+    margin-right: 12px;
+    font-size: 1.2em;
+    width: 20px;
     text-align: center;
+    /* Warna ikon akan ikut warna teks tombol (putih) */
 }
 
 .link-button:hover {
+    /* Ganti background hover ke putih */
     background-color: #ffffff;
-    color: #667eea; /* Warna teks hover (sesuaikan dengan gradien) */
-    transform: translateY(-3px); /* Efek sedikit terangkat */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Shadow lebih jelas saat hover */
-    /* border: 1px solid #667eea; */ /* Opsional: border saat hover */
+    /* Ganti warna teks hover ke biru tua */
+    color: #0D47A1;
+    transform: translateY(-2px); /* Efek terangkat sedikit */
+    /* Ganti shadow hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    /* Pastikan border tetap terlihat saat hover */
+    border: 1px solid #0D47A1;
 }
 
 .page-footer {
     margin-top: 40px;
     font-size: 0.9em;
-    color: rgba(255, 255, 255, 0.7);
-    font-weight: 300;
+    /* Ganti warna footer ke abu-abu */
+    color: #6c757d; /* Warna abu-abu standar */
+    font-weight: 400;
 }
 
 /* Penyesuaian untuk layar kecil (Mobile) */
